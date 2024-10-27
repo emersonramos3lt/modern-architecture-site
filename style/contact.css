@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    border: 1px solid #000;
+    padding: 1rem;
+    margin-left: 4rem;
+}
+
+/* MENU */
+nav #myMenu {
+    display: flex;
+    list-style-type: none;
+    margin-right: 4rem;
+}
+
+nav #myMenu li a {
+    margin-right: 3rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: "EB Garamond", serif;
+    transition: all .3s;
+    color: #000;
+}
+
+nav #myMenu li a:hover {
+    color: gray;
+}
+
+#openMenu, #closeMenu {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #000;
+}
+
+/* MAIN */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 10rem;
+    margin-bottom: 9rem;
+}
+
+main h1 {
+    font-size: 5rem;
+    font-weight: 100;
+    font-family: "EB Garamond", serif;
+    color: #222;
+}
+
+/* FORM */
+form {
+    max-width: 800px;
+}
+
+label {
+    font-weight: 300;
+}
+
+input {
+    all: unset;
+    border-bottom: 1px solid #111;
+    width: 100%;
+    margin-bottom: 3.5rem;
+    margin-top: 1.5rem;
+
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+input:focus {
+    border-bottom: 1px solid gray;
+}
+
+.container-name {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container-name > div {
+    margin-right: 2rem;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+    width: 350px;
+
+    border: 1px solid #111;
+    border-radius: 5px;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+}
+
+.submit-button {
+    all: unset;
+    width: auto;
+    height: auto;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    font-size: 1.3rem;
+
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all .2s;
+}
+
+/* FOOTER */
+footer {
+    background-color: #262626;
+    padding-top: 2rem;
+    padding-bottom: 9rem;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 4rem;
+    color: #fff;
+}
+
+.contact-container h1 {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-size: 2.7rem;
+}
+
+.contact-container p {
+    color: #8a8a8a;
+}
+
+.social i {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+
+    .logo {
+        font-size: 1rem;
+        padding: 0.7rem;
+        margin-left: 1rem;
+    }
+
+    nav #myMenu {
+        height: 105vh;
+        width: 80%;
+        top: -47px;
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 2rem;
+        flex-direction: column;
+        background-color: #fff;
+        right: 0px;
+        transition: all 1s ease 0s;
+        z-index: 100;
+    }
+
+    nav #myMenu #closeMenu {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 63%;
+    }
+    
+    nav #openMenu {
+        display: block;
+        margin-right: 3rem;
+    }
+
+    nav #myMenu li {
+        margin-bottom: 3rem;
+    }
+
+    nav #myMenu li a {
+        font-size: 1.5rem;
+    }
+
+    /* MAIN */
+    /* MAIN */
+    main {
+        max-width: 90%;
+        padding-top: 5rem;
+        margin-bottom: 7rem;
+    }
+
+    main h1 {
+        font-size: 3.5rem;
+    }
+
+    /* FORM */
+    form {
+        max-width: 90%;
+    }
+
+    textarea {
+        width: 200px;
+        transition: all .2s;
+    }
+
+    textarea:focus {
+        width: 80%;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #262626;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+        width: 100%;
+    }
+
+    .contact-container {
+        max-width: 90%;
+        margin: auto;
+
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        gap: 1rem;
+        color: #fff;
+    }
+
+    .contact-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .social i {
+        font-size: 1.4rem;
+    }
+}
