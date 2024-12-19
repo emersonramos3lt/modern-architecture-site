@@ -234,7 +234,7 @@ footer {
     }
 
     .contact-container {
-        max-width: 350px;
+        max-width: 90%;
         margin: auto;
 
         display: flex;
