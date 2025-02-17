@@ -8,16 +8,15 @@ body {
     margin: 0;
 }
 
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-
-    position: fixed;
+/* NAV */
+nav {
     width: 100%;
-    z-index: 1000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: #fff;
 }
 
 .logo {
@@ -26,33 +25,44 @@ header {
     border: 1px solid #000;
     padding: 1rem;
     margin-left: 4rem;
-}
-
-/* MENU */
-nav #myMenu {
-    display: flex;
-    list-style-type: none;
-    margin-right: 4rem;
-}
-
-nav #myMenu li a {
-    margin-right: 3rem;
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-family: "EB Garamond", serif;
-    transition: all .3s;
-    color: #000;
-}
-
-nav #myMenu li a:hover {
-    color: gray;
-}
-
-#openMenu, #closeMenu {
-    display: none;
-    font-size: 1.8rem;
     cursor: pointer;
-    color: #000;
+}
+
+nav #menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    padding-right: 2rem;
+}
+
+nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-family: "EB Garamond", serif;
+    font-size: 1.3rem;
+    transition: all .4s;
+}
+
+nav #menu li a:hover {
+    color: #8a8a8a;
+}
+
+/* MOBILE MENU */
+nav #sideMenu {
+    display: none;
+}
+
+.openMenu {
+    display: none;
+}
+
+.closeMenu {
+    position: absolute;
+    right: 2.1rem;
+    top: 1.1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -175,49 +185,46 @@ footer {
 
 @media(max-width: 700px) {
 
+    nav #menu {
+        display: none;
+    }
+
     .logo {
         font-size: 1rem;
         padding: 0.7rem;
         margin-left: 1rem;
     }
 
-    nav #myMenu {
-        height: 105vh;
-        width: 80%;
-        top: -47px;
-        position: absolute;
-        display: none;
-        justify-content: center;
-        align-items: flex-start;
-        margin-right: 2rem;
+    .openMenu {
+        display: block;
+        font-size: 1.5rem;
+        padding-right: 2rem;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    nav #sideMenu {
+        display: flex;
         flex-direction: column;
+        gap: 2rem;
+        padding: 5rem 2.5 5rem 2.5rem;
+        position: fixed;
+        right: -16rem;
+        top: 0;
+        bottom: 0;
+        width: 13.5rem;
+        z-index: 10;
+        height: 100vh;
         background-color: #fff;
-        right: 0px;
-        transition: all 1s ease 0s;
-        z-index: 100;
+        transition: all .5s;
+
+        list-style-type: none;
     }
 
-    nav #myMenu #closeMenu {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 63%;
-    }
-    
-    nav #openMenu {
-        display: block;
-        margin-right: 3rem;
-    }
-
-    nav #myMenu li {
-        margin-bottom: 3rem;
-    }
-
-    nav #myMenu li a {
+    nav ul li a {
         font-size: 1.5rem;
     }
-
-    /* MAIN */
+    
     /* MAIN */
     main {
         max-width: 90%;
