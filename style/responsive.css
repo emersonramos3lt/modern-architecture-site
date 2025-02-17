@@ -1,4 +1,8 @@
-@media(max-width: 700px) {
+@media screen and (max-width: 700px) {
+
+    nav #menu {
+        display: none;
+    }
 
     .logo {
         font-size: 1rem;
@@ -6,83 +10,39 @@
         margin-left: 1rem;
     }
 
-    nav #myMenu {
-        height: 105vh;
-        width: 80%;
-        top: -47px;
-        position: absolute;
-        display: none;
-        justify-content: center;
-        align-items: flex-start;
-        margin-right: 2rem;
+    .openMenu {
+        display: block;
+        font-size: 1.5rem;
+        padding-right: 2rem;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    nav #sideMenu {
+        display: flex;
         flex-direction: column;
+        gap: 2rem;
+        padding: 5rem 2.5 5rem 2.5rem;
+        position: fixed;
+        right: -16rem;
+        top: 0;
+        bottom: 0;
+        width: 13.5rem;
+        z-index: 10;
+        height: 100vh;
         background-color: #fff;
-        right: 0px;
-        transition: all 1s ease 0s;
-        z-index: 100;
+        transition: all .5s;
+
+        list-style-type: none;
     }
 
-    nav #myMenu #closeMenu {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 63%;
-    }
-    
-    nav #openMenu {
-        display: block;
-        margin-right: 3.8rem;
-    }
-
-    nav #myMenu li {
-        margin-bottom: 3rem;
-    }
-
-    nav #myMenu li a {
+    nav ul li a {
         font-size: 1.5rem;
     }
 
     main {
         width: 90%;
         margin-bottom: 4rem;
-    }
-    
-    /* PROJECTS */
-
-    .box {
-        width: 100%;
-    }
-    
-    .box img {
-        width: 100%;
-    }
-    
-    .title-project {
-        font-size: 2.5rem;
-        order: 1;
-        width: 100%;
-    }
-    
-    .projects p {
-        line-height: 30px;
-        order: 2;
-    }
-    
-    .row-1, .row-2, .row-3 {
-        flex-flow: column wrap;
-        gap: 1rem;
-        margin-bottom: 3rem;
-    }
-    
-    .parallax {
-        height: 20vh;
-        padding-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .parallax::before {
-        background-position: center center;
-        background-attachment: unset;
     }
 
     /* NEWS */
@@ -124,4 +84,45 @@
         font-size: 1.4rem;
     }
 
+}
+
+@media screen and (max-width: 900px) {
+    
+
+     /* PROJECTS */
+     .row-1, .row-2, .row-3 {
+        flex-flow: column wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+     .box {
+        width: 100%;
+    }
+    
+    .box img {
+        width: 100%;
+    }
+    
+    .title-project {
+        font-size: 2.5rem;
+        order: 1;
+        width: 100%;
+    }
+    
+    .projects p {
+        line-height: 30px;
+        order: 2;
+    }
+    
+    .parallax {
+        height: 20vh;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .parallax::before {
+        background-position: center center;
+        background-attachment: unset;
+    }
 }
