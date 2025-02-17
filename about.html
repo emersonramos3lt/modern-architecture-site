@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Learn about our architecture firm, dedicated to creating modern, functional, and sustainable designs. Explore our mission, values, and commitment to making architectural knowledge accessible to everyone.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architecture - About</title>
     <link rel="stylesheet" href="./style/about.css">
@@ -9,21 +10,33 @@
 </head>
 <body>
     
-    <header>
-        <h1 class="logo">ARCHITEC<br>TURE</h1>
+    <nav>
+        <p class="logo">ARCHITEC<br>TURE</p>
 
-        <nav>
-            <div id="openMenu"><i class="fa-solid fa-bars"></i></div>
-
-            <ul id="myMenu">
+        <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <div id="closeMenu"><i class="fa-solid fa-xmark"></i></div>
         </ul>
-        </nav>
-    </header>
+
+         <div class="openMenu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- MOBILE MENU -->
+         <ul id="sideMenu">
+           
+
+            <div class="closeMenu" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMenu()">About</a></li>
+            <li><a href="news.html" onclick="closeMenu()">News</a></li>
+            <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+         </ul>
+    </nav>
 
     <main>
         <div class="columns-container">
